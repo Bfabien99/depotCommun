@@ -83,4 +83,5 @@ main{
 
 .btn-group{
     margin: 5px;
+    align-self:end;
 }
