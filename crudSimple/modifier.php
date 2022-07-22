@@ -49,7 +49,7 @@
     </header>
 
 <main>
-    <h2>Modifier l'article <?= $article->titre?></h2>
+    <h2>Modifier l'article : " <?= $article->titre?> "</h2>
         <?= $error?>
         <form action="" method="post">
             <div class="group">

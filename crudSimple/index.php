@@ -1,6 +1,6 @@
 <?php
     require_once('config.php');
-    $query = $connect->prepare('SELECT * FROM articles');
+    $query = $connect->prepare('SELECT * FROM articles ORDER BY date_publication');
     $query->execute();
 
     $articles = $query->fetchAll();
@@ -30,7 +30,7 @@
                         <div class="box">
                             <img src="<?= $article->url_image ?>" alt="<?= $article->titre ?>" class="imgbox">
                             <div class="content">
-                                <h3><?= $article->titre ?></h3>
+                                <h3 class="title"><?= $article->titre ?></h3>
                                 <p><?= nl2br($article->description) ?></p>
                                 <p>Publié le: <small><?= $article->date_publication ?></small></p>
                             </div>
